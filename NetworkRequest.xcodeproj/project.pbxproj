@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		712A138F1C07671200E39B95 /* AFNHttp2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 712A138E1C07671200E39B95 /* AFNHttp2ViewController.m */; settings = {ASSET_TAGS = (); }; };
 		71DBBF871C068C5C00DE661C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 71DBBF861C068C5C00DE661C /* main.m */; };
 		71DBBF8A1C068C5C00DE661C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 71DBBF891C068C5C00DE661C /* AppDelegate.m */; };
 		71DBBF901C068C5C00DE661C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71DBBF8E1C068C5C00DE661C /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 		71DBBFBA1C06E66200DE661C /* MainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71DBBFB91C06E66200DE661C /* MainTableViewController.m */; settings = {ASSET_TAGS = (); }; };
 		71DBBFBF1C06E7E500DE661C /* WebServiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71DBBFBE1C06E7E500DE661C /* WebServiceViewController.m */; settings = {ASSET_TAGS = (); }; };
 		71DBBFC21C06F65400DE661C /* HttpGetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71DBBFC11C06F65400DE661C /* HttpGetViewController.m */; settings = {ASSET_TAGS = (); }; };
+		71DBBFC51C07456B00DE661C /* AFNHttpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71DBBFC41C07456B00DE661C /* AFNHttpViewController.m */; settings = {ASSET_TAGS = (); }; };
 		F4A61DB971C37669AAFCE724 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C1C971BC1CDFEA2C488FBDD2 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +41,8 @@
 
 /* Begin PBXFileReference section */
 		2EB526BE8A504DC23F512540 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		712A138D1C07671200E39B95 /* AFNHttp2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNHttp2ViewController.h; sourceTree = "<group>"; };
+		712A138E1C07671200E39B95 /* AFNHttp2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNHttp2ViewController.m; sourceTree = "<group>"; };
 		71DBBF821C068C5C00DE661C /* NetworkRequest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetworkRequest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71DBBF861C068C5C00DE661C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		71DBBF881C068C5C00DE661C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -59,6 +63,8 @@
 		71DBBFBE1C06E7E500DE661C /* WebServiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebServiceViewController.m; sourceTree = "<group>"; };
 		71DBBFC01C06F65400DE661C /* HttpGetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpGetViewController.h; sourceTree = "<group>"; };
 		71DBBFC11C06F65400DE661C /* HttpGetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpGetViewController.m; sourceTree = "<group>"; };
+		71DBBFC31C07456B00DE661C /* AFNHttpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNHttpViewController.h; sourceTree = "<group>"; };
+		71DBBFC41C07456B00DE661C /* AFNHttpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNHttpViewController.m; sourceTree = "<group>"; };
 		C1C971BC1CDFEA2C488FBDD2 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF0DDF51D01B64D959FCC67C /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -130,6 +136,10 @@
 				71DBBFBE1C06E7E500DE661C /* WebServiceViewController.m */,
 				71DBBFC01C06F65400DE661C /* HttpGetViewController.h */,
 				71DBBFC11C06F65400DE661C /* HttpGetViewController.m */,
+				71DBBFC31C07456B00DE661C /* AFNHttpViewController.h */,
+				71DBBFC41C07456B00DE661C /* AFNHttpViewController.m */,
+				712A138D1C07671200E39B95 /* AFNHttp2ViewController.h */,
+				712A138E1C07671200E39B95 /* AFNHttp2ViewController.m */,
 				71DBBF8E1C068C5C00DE661C /* Main.storyboard */,
 				71DBBF911C068C5C00DE661C /* Assets.xcassets */,
 				71DBBF931C068C5C00DE661C /* LaunchScreen.storyboard */,
@@ -244,6 +254,7 @@
 				TargetAttributes = {
 					71DBBF811C068C5C00DE661C = {
 						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = FA2863D27N;
 					};
 					71DBBF9A1C068C5C00DE661C = {
 						CreatedOnToolsVersion = 7.0.1;
@@ -356,8 +367,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				71DBBFBA1C06E66200DE661C /* MainTableViewController.m in Sources */,
+				71DBBFC51C07456B00DE661C /* AFNHttpViewController.m in Sources */,
 				71DBBF8A1C068C5C00DE661C /* AppDelegate.m in Sources */,
 				71DBBF871C068C5C00DE661C /* main.m in Sources */,
+				712A138F1C07671200E39B95 /* AFNHttp2ViewController.m in Sources */,
 				71DBBFC21C06F65400DE661C /* HttpGetViewController.m in Sources */,
 				71DBBFBF1C06E7E500DE661C /* WebServiceViewController.m in Sources */,
 			);
@@ -501,10 +514,13 @@
 			baseConfigurationReference = DF0DDF51D01B64D959FCC67C /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = NetworkRequest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.chenyufengweb.NetworkRequest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -513,10 +529,13 @@
 			baseConfigurationReference = 2EB526BE8A504DC23F512540 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = NetworkRequest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.chenyufengweb.NetworkRequest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
