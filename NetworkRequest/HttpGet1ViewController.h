@@ -1,5 +1,5 @@
 //
-//  AFNWebServiceViewController.h
+//  HttpGetViewController.h
 //  NetworkRequest
 //
 //  Created by chenyufeng on 15/11/26.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AFNHttpViewController : UIViewController
+@interface HttpGet1ViewController : UIViewController
 
 @end

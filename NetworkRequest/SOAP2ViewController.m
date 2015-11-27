@@ -1,15 +1,14 @@
-
 //
-//  WebServiceViewController.m
+//  SOAP2ViewController.m
 //  NetworkRequest
 //
-//  Created by chenyufeng on 15/11/26.
+//  Created by chenyufeng on 15/11/27.
 //  Copyright © 2015年 chenyufengweb. All rights reserved.
 //
 
-#import "WebServiceViewController.h"
+#import "SOAP2ViewController.h"
 
-@interface WebServiceViewController ()<NSURLConnectionDelegate>
+@interface SOAP2ViewController ()
 
 @property (strong, nonatomic) NSMutableData *webData;
 @property (strong, nonatomic) NSMutableString *soapResults;
@@ -20,14 +19,13 @@
 
 @property (strong,nonatomic) NSString *xmlReturnToMainThread;
 
-
 @end
 
-@implementation WebServiceViewController
+@implementation SOAP2ViewController
 
 - (void)viewDidLoad {
-  [super viewDidLoad];
-  
+    [super viewDidLoad];
+
   [self query:@"18888888888"];
   
 }
@@ -52,7 +50,7 @@
                        "</soap12:Envelope>", phoneNumber, @""];
   
   // 将这个XML字符串打印出来
-//  NSLog(@"%@", soapMsg);
+  //  NSLog(@"%@", soapMsg);
   // 创建URL，内容是前面的请求报文报文中第二行主机地址加上第一行URL字段
   NSURL *url = [NSURL URLWithString: @"http://webservice.webxml.com.cn/WebServices/MobileCodeWS.asmx"];
   // 根据上面的URL创建一个请求
@@ -66,44 +64,29 @@
   // 将SOAP消息加到请求中
   [req setHTTPBody: [soapMsg dataUsingEncoding:NSUTF8StringEncoding]];
   // 创建连接
-  self.conn = [[NSURLConnection alloc] initWithRequest:req delegate:self];
-  if (self.conn) {
-    self.webData = [NSMutableData data];
-  }
+  
+  
+  
+    [NSURLConnection sendAsynchronousRequest:req queue:[[NSOperationQueue alloc] init] completionHandler:^(NSURLResponse * _Nullable response, NSData * _Nullable data, NSError * _Nullable connectionError) {
+  
+      if (!connectionError) {
+  
+        NSString *result = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+  
+        NSLog(@"成功：%@",result);
+      }else{
+  
+        NSLog(@"失败:%@",connectionError);
+      }
+  
+    }];
+  
+  
+  
+
+  
+  
+  
   
 }
-
-
-// 刚开始接受响应时调用
--(void) connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *) response{
-  [self.webData setLength: 0];
-}
-
-// 每接收到一部分数据就追加到webData中
--(void) connection:(NSURLConnection *)connection didReceiveData:(NSData *) data {
-  
-  if(data != NULL){
-    [self.webData appendData:data];
-  }
-  
-}
-
-// 出现错误时
--(void) connection:(NSURLConnection *)connection didFailWithError:(NSError *) error {
-  self.conn = nil;
-  self.webData = nil;
-}
-
-// 完成接收数据时调用
--(void) connectionDidFinishLoading:(NSURLConnection *) connection {
-  NSString *theXML = [[NSString alloc] initWithBytes:[self.webData mutableBytes]
-                                              length:[self.webData length]
-                                            encoding:NSUTF8StringEncoding];
-  
-  // 打印出得到的XML
-  NSLog(@"返回的数据：%@", theXML);
-  
-}
-
-
 @end

@@ -1,5 +1,5 @@
 //
-//  WebServiceViewController.h
+//  AFNWebServiceViewController.h
 //  NetworkRequest
 //
 //  Created by chenyufeng on 15/11/26.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WebServiceViewController : UIViewController
+@interface AFNHttp1ViewController : UIViewController
 
 @end
