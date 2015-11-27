@@ -12,6 +12,7 @@
 		712A13951C07E58B00E39B95 /* SOAP3ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 712A13941C07E58B00E39B95 /* SOAP3ViewController.m */; settings = {ASSET_TAGS = (); }; };
 		712A13981C07E5BF00E39B95 /* HttpGet2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 712A13971C07E5BF00E39B95 /* HttpGet2ViewController.m */; settings = {ASSET_TAGS = (); }; };
 		712A139B1C07F8D200E39B95 /* AFNsoapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 712A139A1C07F8D200E39B95 /* AFNsoapViewController.m */; settings = {ASSET_TAGS = (); }; };
+		712A139E1C0802E800E39B95 /* AFNHttp3ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 712A139D1C0802E800E39B95 /* AFNHttp3ViewController.m */; settings = {ASSET_TAGS = (); }; };
 		71DBBF871C068C5C00DE661C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 71DBBF861C068C5C00DE661C /* main.m */; };
 		71DBBF8A1C068C5C00DE661C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 71DBBF891C068C5C00DE661C /* AppDelegate.m */; };
 		71DBBF901C068C5C00DE661C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71DBBF8E1C068C5C00DE661C /* Main.storyboard */; };
@@ -55,6 +56,8 @@
 		712A13971C07E5BF00E39B95 /* HttpGet2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpGet2ViewController.m; sourceTree = "<group>"; };
 		712A13991C07F8D200E39B95 /* AFNsoapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNsoapViewController.h; sourceTree = "<group>"; };
 		712A139A1C07F8D200E39B95 /* AFNsoapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNsoapViewController.m; sourceTree = "<group>"; };
+		712A139C1C0802E800E39B95 /* AFNHttp3ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNHttp3ViewController.h; sourceTree = "<group>"; };
+		712A139D1C0802E800E39B95 /* AFNHttp3ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNHttp3ViewController.m; sourceTree = "<group>"; };
 		71DBBF821C068C5C00DE661C /* NetworkRequest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetworkRequest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71DBBF861C068C5C00DE661C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		71DBBF881C068C5C00DE661C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -160,6 +163,8 @@
 				71DBBFC41C07456B00DE661C /* AFNHttp1ViewController.m */,
 				712A138D1C07671200E39B95 /* AFNHttp2ViewController.h */,
 				712A138E1C07671200E39B95 /* AFNHttp2ViewController.m */,
+				712A139C1C0802E800E39B95 /* AFNHttp3ViewController.h */,
+				712A139D1C0802E800E39B95 /* AFNHttp3ViewController.m */,
 				71DBBF8E1C068C5C00DE661C /* Main.storyboard */,
 				71DBBF911C068C5C00DE661C /* Assets.xcassets */,
 				71DBBF931C068C5C00DE661C /* LaunchScreen.storyboard */,
@@ -388,6 +393,7 @@
 			files = (
 				712A13981C07E5BF00E39B95 /* HttpGet2ViewController.m in Sources */,
 				71DBBFBA1C06E66200DE661C /* MainTableViewController.m in Sources */,
+				712A139E1C0802E800E39B95 /* AFNHttp3ViewController.m in Sources */,
 				71DBBFC51C07456B00DE661C /* AFNHttp1ViewController.m in Sources */,
 				71DBBF8A1C068C5C00DE661C /* AppDelegate.m in Sources */,
 				71DBBF871C068C5C00DE661C /* main.m in Sources */,
