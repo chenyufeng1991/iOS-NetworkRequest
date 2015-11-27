@@ -11,6 +11,7 @@
 		712A13921C07E57500E39B95 /* SOAP2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 712A13911C07E57500E39B95 /* SOAP2ViewController.m */; settings = {ASSET_TAGS = (); }; };
 		712A13951C07E58B00E39B95 /* SOAP3ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 712A13941C07E58B00E39B95 /* SOAP3ViewController.m */; settings = {ASSET_TAGS = (); }; };
 		712A13981C07E5BF00E39B95 /* HttpGet2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 712A13971C07E5BF00E39B95 /* HttpGet2ViewController.m */; settings = {ASSET_TAGS = (); }; };
+		712A139B1C07F8D200E39B95 /* AFNsoapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 712A139A1C07F8D200E39B95 /* AFNsoapViewController.m */; settings = {ASSET_TAGS = (); }; };
 		71DBBF871C068C5C00DE661C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 71DBBF861C068C5C00DE661C /* main.m */; };
 		71DBBF8A1C068C5C00DE661C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 71DBBF891C068C5C00DE661C /* AppDelegate.m */; };
 		71DBBF901C068C5C00DE661C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71DBBF8E1C068C5C00DE661C /* Main.storyboard */; };
@@ -52,6 +53,8 @@
 		712A13941C07E58B00E39B95 /* SOAP3ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOAP3ViewController.m; sourceTree = "<group>"; };
 		712A13961C07E5BF00E39B95 /* HttpGet2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpGet2ViewController.h; sourceTree = "<group>"; };
 		712A13971C07E5BF00E39B95 /* HttpGet2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpGet2ViewController.m; sourceTree = "<group>"; };
+		712A13991C07F8D200E39B95 /* AFNsoapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNsoapViewController.h; sourceTree = "<group>"; };
+		712A139A1C07F8D200E39B95 /* AFNsoapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNsoapViewController.m; sourceTree = "<group>"; };
 		71DBBF821C068C5C00DE661C /* NetworkRequest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetworkRequest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71DBBF861C068C5C00DE661C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		71DBBF881C068C5C00DE661C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -151,6 +154,8 @@
 				71DBBFC11C06F65400DE661C /* HttpGet1ViewController.m */,
 				712A13961C07E5BF00E39B95 /* HttpGet2ViewController.h */,
 				712A13971C07E5BF00E39B95 /* HttpGet2ViewController.m */,
+				712A13991C07F8D200E39B95 /* AFNsoapViewController.h */,
+				712A139A1C07F8D200E39B95 /* AFNsoapViewController.m */,
 				71DBBFC31C07456B00DE661C /* AFNHttp1ViewController.h */,
 				71DBBFC41C07456B00DE661C /* AFNHttp1ViewController.m */,
 				712A138D1C07671200E39B95 /* AFNHttp2ViewController.h */,
@@ -388,6 +393,7 @@
 				71DBBF871C068C5C00DE661C /* main.m in Sources */,
 				712A13921C07E57500E39B95 /* SOAP2ViewController.m in Sources */,
 				712A138F1C07671200E39B95 /* AFNHttp2ViewController.m in Sources */,
+				712A139B1C07F8D200E39B95 /* AFNsoapViewController.m in Sources */,
 				712A13951C07E58B00E39B95 /* SOAP3ViewController.m in Sources */,
 				71DBBFC21C06F65400DE661C /* HttpGet1ViewController.m in Sources */,
 				71DBBFBF1C06E7E500DE661C /* SOAP1ViewController.m in Sources */,
