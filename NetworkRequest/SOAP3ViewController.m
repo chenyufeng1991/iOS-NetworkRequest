@@ -78,9 +78,6 @@
   
   [dataTask resume];
   
-  
-  
-  
 }
 
 
