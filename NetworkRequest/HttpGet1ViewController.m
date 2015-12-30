@@ -36,30 +36,17 @@
   NSMutableURLRequest *urlRequest = [NSMutableURLRequest requestWithURL:url];
   [urlRequest setTimeoutInterval:30];
   [urlRequest setHTTPMethod:@"GET"];
-  //以下方法已经被禁用；
-  NSOperationQueue *queue = [[NSOperationQueue alloc] init];
+  //以下方法已经被弃用；
   [NSURLConnection
    sendAsynchronousRequest:urlRequest
-   queue:queue
-   completionHandler:^(NSURLResponse *response,
-                       NSData *data,
-                       NSError *error) {
-     
-     if ([data length] >0  &&
-         error == nil){
-       NSString *html = [[NSString alloc] initWithData:data
-                                              encoding:NSUTF8StringEncoding];
-       resault=[html copy];
-       NSLog(@"返回的服务器数据 = %@", html);
-     }
-     else if ([data length] == 0 &&
-              error == nil){
-       resault=@"Nothing was downloaded.";
-       NSLog(@"Nothing was downloaded.");
-     }
-     else if (error != nil){
-       resault=[NSString stringWithFormat:@"Error happened = %@", error];
-       NSLog(@"发生错误 = %@", error);
+   queue:[[NSOperationQueue alloc] init]
+   completionHandler:^(NSURLResponse *response,NSData *data,NSError *error) {
+
+     if (!error) {
+       NSString *string = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+       NSLog(@"返回成功:%@",string);
+     }else{
+       NSLog(@"发生错误：%@",error);
      }
    }];
   return resault;
