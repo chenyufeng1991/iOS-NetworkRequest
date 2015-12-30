@@ -44,7 +44,29 @@
 
   AFHTTPRequestOperation *operate = [[AFHTTPRequestOperation alloc] initWithRequest:req];
   operate.responseSerializer = [AFHTTPResponseSerializer serializer];
+
+  if ([[NSFileManager defaultManager] fileExistsAtPath:@"Library/Caches/12"]) {
+    //从本地读缓存文件
+    NSData *data = [NSData dataWithContentsOfFile:@"Library/Caches/12"];
+    //这个data就可以使用了；
+    NSString *result = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    NSLog(@"缓存结果：%@",result);
+  }else{
+    //缓存不存在，就可以继续进行网络请求；
+  }
+
+
   [operate setCompletionBlockWithSuccess:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
+
+  //在AFNETWorking中，并没有提供现成的缓存方案，我们可以通过写文件的方式，自行做缓存。
+    //写缓存：我这里存储NSData,此时缓存的内容必定是最新的内容；
+    //Library/Caches：存放缓存文件，iTunes不会备份此目录，此目录下文件不会在应用退出删除
+    /**
+     *   1:Documents：应用中用户数据可以放在这里，iTunes备份和恢复的时候会包括此目录
+     2:tmp：存放临时文件，iTunes不会备份和恢复此目录，此目录下文件可能会在应用退出后删除
+     3:Library/Caches：存放缓存文件，iTunes不会备份此目录，此目录下文件不会在应用退出删除
+     */
+    [responseObject writeToFile:@"Library/Caches/12" options:NSDataWritingWithoutOverwriting error:nil];
 
     NSString *result = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
     NSLog(@"成功：%@",result);
