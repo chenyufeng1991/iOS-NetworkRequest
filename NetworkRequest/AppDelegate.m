@@ -16,7 +16,12 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-  // Override point for customization after application launch.
+
+
+
+//  NSLog(@"沙盒路径:%@",NSHomeDirectory());
+
+
   return YES;
 }
 

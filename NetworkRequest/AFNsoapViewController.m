@@ -71,7 +71,7 @@
     NSString *result = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
     NSLog(@"成功：%@",result);
   } failure:^(AFHTTPRequestOperation * _Nonnull operation, NSError * _Nonnull error) {
-    NSLog(@"成功：%@",error);
+    NSLog(@"失败：%@",error);
   }];
   [operate start];
 }
