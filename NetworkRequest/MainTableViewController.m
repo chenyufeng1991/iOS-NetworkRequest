@@ -17,13 +17,6 @@
 @implementation MainTableViewController
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
-    
+  [super viewDidLoad];
 }
-
-
-
-
-
-
 @end
