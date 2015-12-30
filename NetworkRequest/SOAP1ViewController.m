@@ -95,9 +95,7 @@
   [req setHTTPMethod:@"POST"];
   [req setHTTPBody: [soapMsg dataUsingEncoding:NSUTF8StringEncoding]];
   self.conn = [[NSURLConnection alloc] initWithRequest:req delegate:self];
-  if (self.conn) {
-    self.webData = [NSMutableData data];
-  }
+  self.webData = [[NSMutableData alloc] init];
 }
 
 // 刚开始接受响应时调用，所有接收的数据通过NSMutableData来接收；

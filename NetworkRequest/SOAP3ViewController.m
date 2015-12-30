@@ -41,21 +41,13 @@
                        "</soap12:Body>"
                        "</soap12:Envelope>", phoneNumber, @""];
 
-  // 将这个XML字符串打印出来
-  //  NSLog(@"%@", soapMsg);
-  // 创建URL，内容是前面的请求报文报文中第二行主机地址加上第一行URL字段
   NSURL *url = [NSURL URLWithString: @"http://webservice.webxml.com.cn/WebServices/MobileCodeWS.asmx"];
-  // 根据上面的URL创建一个请求
   NSMutableURLRequest *req = [NSMutableURLRequest requestWithURL:url];
   NSString *msgLength = [NSString stringWithFormat:@"%lu", (unsigned long)[soapMsg length]];
-  // 添加请求的详细信息，与请求报文前半部分的各字段对应
   [req addValue:@"application/soap+xml; charset=utf-8" forHTTPHeaderField:@"Content-Type"];
   [req addValue:msgLength forHTTPHeaderField:@"Content-Length"];
-  // 设置请求行方法为POST，与请求报文第一行对应
   [req setHTTPMethod:@"POST"];
-  // 将SOAP消息加到请求中
   [req setHTTPBody: [soapMsg dataUsingEncoding:NSUTF8StringEncoding]];
-  // 创建连接
 
   NSURLSession *session = [NSURLSession sharedSession];
   NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:req completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
@@ -68,6 +60,5 @@
     }
   }];
   [dataTask resume];
-
 }
 @end
