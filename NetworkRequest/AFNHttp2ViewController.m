@@ -17,13 +17,10 @@
 @implementation AFNHttp2ViewController
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
+  [super viewDidLoad];
 
-  
   AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
   manager.responseSerializer = [AFHTTPResponseSerializer serializer];
-  
-  
   NSDictionary *dic = @{@"mobileCode":@"18888888888",
                         @"userID":@""};
   //这里改成POST，就可以进行POST请求；
@@ -38,6 +35,4 @@
        }];
 
 }
-
-
 @end

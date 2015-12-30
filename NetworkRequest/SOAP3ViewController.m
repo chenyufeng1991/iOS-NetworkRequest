@@ -19,14 +19,12 @@
 @implementation SOAP3ViewController
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
-
+  [super viewDidLoad];
   [self query:@"18888888888"];
-  
 }
 
 -(void)query:(NSString*)phoneNumber{
-  
+
   // 设置我们之后解析XML时用的关键字，与响应报文中Body标签之间的getMobileCodeInfoResult标签对应
   // 创建SOAP消息，内容格式就是网站上提示的请求报文的主体实体部分    这里使用了SOAP1.2；
   NSString *soapMsg = [NSString stringWithFormat:
@@ -42,7 +40,7 @@
                        "</getMobileCodeInfo>"
                        "</soap12:Body>"
                        "</soap12:Envelope>", phoneNumber, @""];
-  
+
   // 将这个XML字符串打印出来
   //  NSLog(@"%@", soapMsg);
   // 创建URL，内容是前面的请求报文报文中第二行主机地址加上第一行URL字段
@@ -58,27 +56,18 @@
   // 将SOAP消息加到请求中
   [req setHTTPBody: [soapMsg dataUsingEncoding:NSUTF8StringEncoding]];
   // 创建连接
-  
+
   NSURLSession *session = [NSURLSession sharedSession];
   NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:req completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-    
+
     if (!error) {
-      
       NSString *result = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-      
       NSLog(@"成功：%@",result);
     }else{
-      
       NSLog(@"失败 ： %@",error);
     }
-    
-    
-    
   }];
-  
   [dataTask resume];
-  
+
 }
-
-
 @end

@@ -20,13 +20,10 @@
 
 - (void)viewDidLoad {
   [super viewDidLoad];
-  
   [self query:@"18888888888"];
-  
 }
 
 -(void)query:(NSString*)phoneNumber{
-  
   // 创建SOAP消息，内容格式就是网站上提示的请求报文的主体实体部分    这里使用了SOAP1.2；
   NSString *soapMsg = [NSString stringWithFormat:
                        @"<?xml version=\"1.0\" encoding=\"utf-8\"?>"
@@ -57,7 +54,6 @@
   
 }
 
-
 // 刚开始接受响应时调用
 -(void) connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *) response{
   [self.webData setLength: 0];
@@ -65,11 +61,9 @@
 
 // 每接收到一部分数据就追加到webData中
 -(void) connection:(NSURLConnection *)connection didReceiveData:(NSData *) data {
-  
   if(data != NULL){
     [self.webData appendData:data];
   }
-  
 }
 
 // 出现错误时
@@ -83,18 +77,9 @@
   NSString *theXML = [[NSString alloc] initWithBytes:[self.webData mutableBytes]
                                               length:[self.webData length]
                                             encoding:NSUTF8StringEncoding];
-  
   // 打印出得到的XML
   NSLog(@"返回的数据：%@", theXML);
   
 }
 
 @end
-
-
-
-
-
-
-
-

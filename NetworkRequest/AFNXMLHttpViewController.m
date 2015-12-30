@@ -18,7 +18,6 @@
 
 - (void)viewDidLoad {
   [super viewDidLoad];
-  
   /*
    这里需要进行如下的安全性设置；
    使用AFNetworking发送XML，如果不进行如下的设置，将会报错：
@@ -30,11 +29,8 @@
   AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
   [manager setSecurityPolicy:securityPolicy];
   manager.responseSerializer = [AFHTTPResponseSerializer serializer];
-  
   NSString *str = @"这里存放需要发送的XML";
-  
   NSDictionary *parameters = @{@"test" : str};
-  
   [manager POST:@"需要发送的链接"
      parameters:parameters
         success:^(AFHTTPRequestOperation *operation,id responseObject){
@@ -44,8 +40,5 @@
         failure:^(AFHTTPRequestOperation *operation,NSError *error){
           NSLog(@"失败: %@", error);
         }];
-  
 }
-
-
 @end

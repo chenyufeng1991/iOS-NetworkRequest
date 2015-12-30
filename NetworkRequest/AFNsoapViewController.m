@@ -18,8 +18,7 @@
 @implementation AFNsoapViewController
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
-
+  [super viewDidLoad];
   // 创建SOAP消息，内容格式就是网站上提示的请求报文的主体实体部分    这里使用了SOAP1.2；
   NSString *soapMsg = [NSString stringWithFormat:
                        @"<?xml version=\"1.0\" encoding=\"utf-8\"?>"
@@ -34,7 +33,7 @@
                        "</getMobileCodeInfo>"
                        "</soap12:Body>"
                        "</soap12:Envelope>", @"18888888888", @""];
-  
+
   NSURL *url = [NSURL URLWithString: @"http://webservice.webxml.com.cn/WebServices/MobileCodeWS.asmx"];
   NSMutableURLRequest *req = [NSMutableURLRequest requestWithURL:url];
   NSString *msgLength = [NSString stringWithFormat:@"%lu", (unsigned long)[soapMsg length]];
@@ -42,30 +41,16 @@
   [req addValue:msgLength forHTTPHeaderField:@"Content-Length"];
   [req setHTTPMethod:@"POST"];
   [req setHTTPBody: [soapMsg dataUsingEncoding:NSUTF8StringEncoding]];
-  
-  
-  
-  
-  
+
   AFHTTPRequestOperation *operate = [[AFHTTPRequestOperation alloc] initWithRequest:req];
   operate.responseSerializer = [AFHTTPResponseSerializer serializer];
   [operate setCompletionBlockWithSuccess:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
-    
-    
+
     NSString *result = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
-    
     NSLog(@"成功：%@",result);
-    
   } failure:^(AFHTTPRequestOperation * _Nonnull operation, NSError * _Nonnull error) {
     NSLog(@"成功：%@",error);
   }];
-  
   [operate start];
-  
-  
-  
-  
 }
-
-
 @end
