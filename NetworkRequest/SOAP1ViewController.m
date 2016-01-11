@@ -35,27 +35,20 @@
   (3)SOAP RPC表示(RPC representation):表示远程过程调用和应答的协定;
   (4)SOAP绑定（binding）:使用底层协议交换信息。
 
- 
- 
- 
  SOAP=RPC+HTTP+XML：SOAP使用HTTP传送XML，
  采用HTTP作为底层通讯协议；
  RPC作为一致性的调用途径；
  ＸＭＬ作为数据传送的格式；
  
- 
  客户端发送请求时，不管客户端是什么平台的，首先把请求转换成XML格式，SOAP网关可自动执行这个转换。
  
  SOAP1.2没有SOAPAction且类型为soap+xml;
- 
- 
+
  SOAP11客户端可以请求SOAP11和SOAP12服务器；
  SOAP12客户端只能请求SOAP12服务器；
 
  
  RPC：远程过程调用协议。
- 
-
  */
 @interface SOAP1ViewController ()<NSURLConnectionDelegate>
 
@@ -67,6 +60,7 @@
 @implementation SOAP1ViewController
 
 - (void)viewDidLoad {
+
   [super viewDidLoad];
   [self query:@"18888888888"];
 }
@@ -100,11 +94,13 @@
 
 // 刚开始接受响应时调用，所有接收的数据通过NSMutableData来接收；
 -(void) connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *) response{
+
   [self.webData setLength: 0];
 }
 
 // 每接收到一部分数据就追加到webData中
 -(void) connection:(NSURLConnection *)connection didReceiveData:(NSData *) data {
+
   if(data != nil){
     [self.webData appendData:data];
   }
@@ -112,12 +108,14 @@
 
 // 出现错误时,全部置空；
 -(void) connection:(NSURLConnection *)connection didFailWithError:(NSError *) error {
+
   self.conn = nil;
   self.webData = nil;
 }
 
 // 完成接收数据时调用
 -(void) connectionDidFinishLoading:(NSURLConnection *) connection {
+    
   NSString *xml = [[NSString alloc] initWithData:self.webData encoding:NSUTF8StringEncoding];
   // 打印出得到的XML
   NSLog(@"返回的数据：%@", xml);

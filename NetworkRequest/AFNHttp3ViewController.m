@@ -17,6 +17,7 @@
 @implementation AFNHttp3ViewController
 
 - (void)viewDidLoad {
+
   [super viewDidLoad];
   NSURL *url = [NSURL URLWithString: @"http://webservice.webxml.com.cn/WebServices/MobileCodeWS.asmx/getMobileCodeInfo?mobileCode=18888888888&userId="];
   NSMutableURLRequest *req = [NSMutableURLRequest requestWithURL:url];
@@ -28,6 +29,7 @@
     NSString *result = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
     NSLog(@"成功：%@",result);
   } failure:^(AFHTTPRequestOperation * _Nonnull operation, NSError * _Nonnull error) {
+
     NSLog(@"失败：%@",error);
   }];
   [operation start];

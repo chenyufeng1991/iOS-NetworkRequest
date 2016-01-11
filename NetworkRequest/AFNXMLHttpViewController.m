@@ -17,6 +17,7 @@
 @implementation AFNXMLHttpViewController
 
 - (void)viewDidLoad {
+
   [super viewDidLoad];
   /*
    这里需要进行如下的安全性设置；
@@ -34,10 +35,12 @@
   [manager POST:@"需要发送的链接"
      parameters:parameters
         success:^(AFHTTPRequestOperation *operation,id responseObject){
+
           NSString *string = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
           NSLog(@"成功: %@", string);
         }
         failure:^(AFHTTPRequestOperation *operation,NSError *error){
+
           NSLog(@"失败: %@", error);
         }];
 }

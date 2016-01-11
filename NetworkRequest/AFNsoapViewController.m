@@ -18,6 +18,7 @@
 @implementation AFNsoapViewController
 
 - (void)viewDidLoad {
+
   [super viewDidLoad];
   // 创建SOAP消息，内容格式就是网站上提示的请求报文的主体实体部分    这里使用了SOAP1.2；
   NSString *soapMsg = [NSString stringWithFormat:
@@ -55,9 +56,7 @@
     //缓存不存在，就可以继续进行网络请求；
   }
 
-
   [operate setCompletionBlockWithSuccess:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
-
   //在AFNETWorking中，并没有提供现成的缓存方案，我们可以通过写文件的方式，自行做缓存。
     //写缓存：我这里存储NSData,此时缓存的内容必定是最新的内容；
     //Library/Caches：存放缓存文件，iTunes不会备份此目录，此目录下文件不会在应用退出删除
@@ -67,12 +66,13 @@
      3:Library/Caches：存放缓存文件，iTunes不会备份此目录，此目录下文件不会在应用退出删除
      */
     [responseObject writeToFile:@"Library/Caches/12" options:NSDataWritingWithoutOverwriting error:nil];
-
     NSString *result = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
     NSLog(@"成功：%@",result);
   } failure:^(AFHTTPRequestOperation * _Nonnull operation, NSError * _Nonnull error) {
+
     NSLog(@"失败：%@",error);
   }];
   [operate start];
 }
+
 @end
